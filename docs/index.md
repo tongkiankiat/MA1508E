@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: head
 title: MA1508E
 ---
 
@@ -60,7 +60,7 @@ Adding on to 1. and 2.,
 * (**A** + **B**)**C** = **AC** + **BC** (Right Distributive Law)
 * _c_(**AB**) = (_c_**A**)**B** = **A**(_c_**B**) (Commute with scalar multiplication)
 * For any _m x n_ matrix **A**, **I$_{m}$A** = **A** = **AI**$_{n}$
-* If **AB** = **0**$_{m x n}$, **A** and **B** can both be **nonzero**
+* If **AB** = **0**<sub>m x n</sub>, **A** and **B** can both be **nonzero**
 
 ### Properties of Transpose
 
@@ -106,30 +106,28 @@ Let **A** be an invertible matrix of order n.
 
 ### Inverse of Elementary Matrices
 
-* **E**: *R$_{i}$* + *cR$_{j}$*, **E$^{-1}$** = *R$_{i}$* - *cR$_{j}$*
-* **E**: *R$_{i}$* ↔ *R$_{j}$*, **E**$^{-1}$: *R$_{i}$* ↔ *R$_{j}$* (same matrix!)
-* **E**: *cR$_{j}$*, **E**$^{-1}$: $\frac{1}{c}$R$_{i}$
+* **E**: *R<sub>i</sub>* + *cR<sub>j</sub>*, **E<sup>-1</sup>**: *R<sub>i</sub>* - *cR<sub>j</sub>*
+* **E**: *R<sub>i</sub>* ↔ *R<sub>j</sub>*, **E**<sup>-1</sup>: *R<sub>i</sub>* ↔ *R<sub>j</sub>* (same matrix!)
+* **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: \(\frac{1}{c}\)R<sub>i</sub>
 
 ### Determinant
 
 * For 2x2 matrices, $\mathbf{A} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, $\det(\mathbf{A}) = ad - bc$.
 * For higher powers, use cofactor expansion:
-    1. \(
-       \begin{pmatrix}
+    1. $\begin{pmatrix}
        \text{+} & \text{-} & \text{+} & \cdots & \cdots \\
        \text{-} & \text{+} & \text{-} & \cdots & \cdots \\
        \text{+} & \text{-} & \text{+} & \cdots & \cdots \\
        \vdots & \vdots & \vdots & \ddots & \vdots \\
        \cdots & \cdots & \cdots & \cdots & \cdot
-       \end{pmatrix}
-       \) (Remember to check the sign!)
+       \end{pmatrix}$ (Remember to check the sign!)
 
 ### Properties of Determinant
 
 Let **A** be a square matrix.
 
 * det(**A**) = det(**A**$^{T}$)
-* If **A** is triangular, det(**A**) = *a$_{11}$a$_{22}$...a$_{nn}$*
+* If **A** is triangular, det(**A**) = *a<sub>11</sub>a<sub>22</sub>...a<sub>nn</sub>*
     * Multiply all its diagonal entries
 
 ### Determinant of Elementary Row Operations
