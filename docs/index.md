@@ -35,7 +35,8 @@ Adding on to 1. and 2.,
 
 ### Row Equivalent Matrices
 
-* Two (augmented) matrices are **row equivalent** if one can be obtained from the other by performing a set of **elementary row operations**.
+* Two (augmented) matrices are **row equivalent** if one can be obtained from the other by performing a set of *
+  *elementary row operations**.
 * Two linear systems have the **same solutions** if their augmented matrices are **row equivalent**.
     * Their rref forms are the same &#8594; same solution
 
@@ -113,13 +114,15 @@ Let **A** be an invertible matrix of order n.
 
 * For 2x2 matrices, $\mathbf{A} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, $\det(\mathbf{A}) = ad - bc$.
 * For higher powers, use cofactor expansion:
-    1. $\begin{pmatrix}
+    1. \(
+       \begin{pmatrix}
        \text{+} & \text{-} & \text{+} & \cdots & \cdots \\
        \text{-} & \text{+} & \text{-} & \cdots & \cdots \\
        \text{+} & \text{-} & \text{+} & \cdots & \cdots \\
        \vdots & \vdots & \vdots & \ddots & \vdots \\
        \cdots & \cdots & \cdots & \cdots & \cdot
-       \end{pmatrix}$ (Remember to check the sign!)
+       \end{pmatrix}
+       \) (Remember to check the sign!)
 
 ### Properties of Determinant
 
