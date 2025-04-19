@@ -102,7 +102,7 @@ B =
 Let **A** be an invertible matrix of order n.
 
 * (**A**<sup>-1</sup>)<sup>-1</sup> = **A**
-* (*a***A**)<sup>-1</sup> = $`\frac{1}{a}`$**A**<sup>-1</sup>
+* (*a***A**)<sup>-1</sup> = $\frac{1}{a}$**A**<sup>-1</sup>
 * (**A**<sup>T</sup>)<sup>-1</sup> = (**A**<sup>-1</sup>)<sup>T</sup>
 * (**AB**)<sup>-1</sup> = **B**<sup>-1</sup>**A**<sup>-1</sup>
 
@@ -114,11 +114,11 @@ Let **A** be an invertible matrix of order n.
 
 * **E**: *R<sub>i</sub>* + *cR<sub>j</sub>*, **E<sup>-1</sup>**: *R<sub>i</sub>* - *cR<sub>j</sub>*
 * **E**: *R<sub>i</sub>* ↔ *R<sub>j</sub>*, **E**<sup>-1</sup>: *R<sub>i</sub>* ↔ *R<sub>j</sub>* (same matrix!)
-* **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: $`\frac{1}{c}`$*R<sub>i</sub>*
+* **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: $\frac{1}{c}$*R<sub>i</sub>*
 
 ### Determinant
 
-* For 2x2 matrices, `$\mathbf{A} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$`, `$\det(\mathbf{A}) = ad - bc$`.
+* For 2x2 matrices, $\mathbf{A} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, $\det(\mathbf{A}) = ad - bc$.
 * For higher powers, use cofactor expansion:
     1. `$\begin{pmatrix}
        \text{+} & \text{-} & \text{+} & \cdots & \cdots \\
