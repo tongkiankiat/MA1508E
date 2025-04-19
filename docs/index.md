@@ -72,20 +72,24 @@ Adding on to 1. and 2.,
 
 ### Block Multiplication
 
-* $AB = A \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \cdots & \mathbf{b}_n \end{pmatrix} = \begin{pmatrix} A\mathbf{b}_1 & A\mathbf{b}_2 & \cdots & A\mathbf{b}_n \end{pmatrix}$
-* $AB = \begin{pmatrix}
-  \mathbf{a}_1 \\
-  \mathbf{a}_2 \\
-  \vdots \\
-  \mathbf{a}_m
-  \end{pmatrix}
-  B =
-  \begin{pmatrix}
-  \mathbf{a}_1 B \\
-  \mathbf{a}_2 B \\
-  \vdots \\
-  \mathbf{a}_m B
-  \end{pmatrix}$
+* ```math
+    AB = A \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \cdots & \mathbf{b}_n \end{pmatrix} = \begin{pmatrix} A\mathbf{b}_1 & A\mathbf{b}_2 & \cdots & A\mathbf{b}_n \end{pmatrix}
+    ```
+* ```math
+    AB = \begin{pmatrix}
+    \mathbf{a}_1 \\
+    \mathbf{a}_2 \\
+    \vdots \\
+    \mathbf{a}_m
+    \end{pmatrix}
+    B =
+    \begin{pmatrix}
+    \mathbf{a}_1 B \\
+    \mathbf{a}_2 B \\
+    \vdots \\
+    \mathbf{a}_m B
+    \end{pmatrix}
+    ```
 
 ### Invertible Matrices
 
