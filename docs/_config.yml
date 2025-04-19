@@ -1,5 +1,0 @@
-title: MA1508E
-markdown: kramdown
-kramdown:
-  input: GFM
-  math_engine: mathjax
