@@ -114,7 +114,7 @@ Let **A** be an invertible matrix of order n.
 
 * **E**: *R<sub>i</sub>* + *cR<sub>j</sub>*, **E<sup>-1</sup>**: *R<sub>i</sub>* - *cR<sub>j</sub>*
 * **E**: *R<sub>i</sub>* ↔ *R<sub>j</sub>*, **E**<sup>-1</sup>: *R<sub>i</sub>* ↔ *R<sub>j</sub>* (same matrix!)
-* **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: \(\frac{1}{c}\)*R<sub>i</sub>*
+* **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: $$\frac{1}{c}$$*R<sub>i</sub>*
 
 ### Determinant
 
