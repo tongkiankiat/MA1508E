@@ -96,37 +96,37 @@ Adding on to 1. and 2.,
 Let **A** be an invertible matrix of order n.
 
 * (**A**<sup>-1</sup>)<sup>-1</sup> = **A**
-* (*a***A**)<sup>-1</sup> = $\frac{1}{a}$**A**<sup>-1</sup>
+* (*a***A**)<sup>-1</sup> = $`\frac{1}{a}`$**A**<sup>-1</sup>
 * (**A**<sup>T</sup>)<sup>-1</sup> = (**A**<sup>-1</sup>)<sup>T</sup>
 * (**AB**)<sup>-1</sup> = **B**<sup>-1</sup>**A**<sup>-1</sup>
 
 ### Elementary Matrices
 
-* If **B** is row equivalent to **A**, **B** = **E$_{k}$...E$_{2}$E$_{1}$A**.
+* If **B** is row equivalent to **A**, **B** = **E<sub>k</sub>...E<sub>2</sub>E<sub>1</sub>A**.
 
 ### Inverse of Elementary Matrices
 
 * **E**: *R<sub>i</sub>* + *cR<sub>j</sub>*, **E<sup>-1</sup>**: *R<sub>i</sub>* - *cR<sub>j</sub>*
 * **E**: *R<sub>i</sub>* ↔ *R<sub>j</sub>*, **E**<sup>-1</sup>: *R<sub>i</sub>* ↔ *R<sub>j</sub>* (same matrix!)
-* **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: $\frac{1}{c}$*R<sub>i</sub>*
+* **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: $`\frac{1}{c}`$*R<sub>i</sub>*
 
 ### Determinant
 
-* For 2x2 matrices, $\mathbf{A} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, $\det(\mathbf{A}) = ad - bc$.
+* For 2x2 matrices, $`\mathbf{A} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}`$, $`\det(\mathbf{A}) = ad - bc`$.
 * For higher powers, use cofactor expansion:
-    1. $\begin{pmatrix}
+    1. $`\begin{pmatrix}
        \text{+} & \text{-} & \text{+} & \cdots & \cdots \\
        \text{-} & \text{+} & \text{-} & \cdots & \cdots \\
        \text{+} & \text{-} & \text{+} & \cdots & \cdots \\
        \vdots & \vdots & \vdots & \ddots & \vdots \\
        \cdots & \cdots & \cdots & \cdots & \cdot
-       \end{pmatrix}$ (Remember to check the sign!)
+       \end{pmatrix}`$ (Remember to check the sign!)
 
 ### Properties of Determinant
 
 Let **A** be a square matrix.
 
-* det(**A**) = det(**A**$^{T}$)
+* det(**A**) = det(**A**<sup>T</sup>)
 * If **A** is triangular, det(**A**) = *a<sub>11</sub>a<sub>22</sub>...a<sub>nn</sub>*
     * Multiply all its diagonal entries
 
