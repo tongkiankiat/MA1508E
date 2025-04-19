@@ -119,7 +119,7 @@ Let **A** be an invertible matrix of order n.
 
 ### Determinant
 
-* For 2×2 matrices, $\mathbf{A} = \left( \!\begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \!\right)$, $\det(\mathbf{A}) = ad - bc$.
+* For 2×2 matrices, $\det(\mathbf{A}) = ad - bc$.
 * For higher powers, use cofactor expansion:
 
   $$ 
@@ -136,11 +136,14 @@ Let **A** be an invertible matrix of order n.
 
 ### Properties of Determinant
 
-Let **A** be a square matrix.
+Let **A** and **B** be a square matrices of the same order.
 
 * det(**A**) = det(**A**<sup>T</sup>)
 * If **A** is triangular, det(**A**) = *a<sub>11</sub>a<sub>22</sub>...a<sub>nn</sub>*
     * Multiply all its diagonal entries
+* det(**A**<sub>1</sub>**A**<sub>2</sub>...**A**<sub>k</sub>) = det(**A**<sub>1</sub>)det(**A**<sub>2</sub>)...det(**A**<sub>k</sub>)
+* det(**A**<sup>-1</sup>) = det(**A**)<sup>-1</sup>
+* det(*c***A**) = *c*<sup>*n*</sup>det(**A**)
 
 ### Determinant of Elementary Row Operations
 
@@ -149,6 +152,8 @@ Let **A** be a square matrix.
 * **E**: *cR<sub>i</sub>* → det(**E**) = c
 
 ## Euclidean Vector Spaces
+
+
 
 ## Subspaces
 
