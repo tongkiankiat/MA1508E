@@ -2,6 +2,7 @@
 layout: default
 title: MA1508E
 ---
+<p>Test custom layout</p>
 
 # MA1508E Formulae, Theorems and Definitions
 
