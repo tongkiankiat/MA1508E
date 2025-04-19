@@ -71,13 +71,11 @@ Adding on to 1. and 2.,
 
 ### Block Multiplication
 $$
-AB = A \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \cdots & \mathbf{b}_n \end{pmatrix}
-= \begin{pmatrix} A\mathbf{b}_1 & A\mathbf{b}_2 & \cdots & A\mathbf{b}_n \end{pmatrix}
-$$
-
-$$
 \begin{aligned}
-AB &= 
+AB &= A \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \cdots & \mathbf{b}_n \end{pmatrix}
+= \begin{pmatrix} A\mathbf{b}_1 & A\mathbf{b}_2 & \cdots & A\mathbf{b}_n \end{pmatrix} \\
+\\
+AB &=
 \begin{pmatrix}
 \mathbf{a}_1 \\
 \mathbf{a}_2 \\
@@ -93,6 +91,7 @@ B =
 \end{pmatrix}
 \end{aligned}
 $$
+
 
 
 ### Invertible Matrices
@@ -120,7 +119,7 @@ Let **A** be an invertible matrix of order n.
 
 ### Determinant
 
-* For 2×2 matrices, $\mathbf{A} = \left( \begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \right)$, $\det(\mathbf{A}) = ad - bc$.
+* For 2×2 matrices, $\mathbf{A} = \left( \!\begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \!\right)$, $\det(\mathbf{A}) = ad - bc$.
 * For higher powers, use cofactor expansion:
 
   $$ 
