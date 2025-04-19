@@ -1,3 +1,8 @@
+---
+layout: default
+title: MA1508E
+---
+
 # MA1508E Formulae, Theorems and Definitions
 
 ## Table of Contents
