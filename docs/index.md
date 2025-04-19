@@ -3,7 +3,13 @@ layout: default
 title: MA1508E
 ---
 <p>Test custom layout</p>
+Inline math: \( a^2 + b^2 = c^2 \)
 
+Display math:
+
+$$
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+$$
 # MA1508E Formulae, Theorems and Definitions
 
 ## Table of Contents
