@@ -76,7 +76,8 @@ AB = A \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \cdots & \mathbf{b}_n \end{
 $$
 
 $$
-AB =
+\begin{aligned}
+AB &= 
 \begin{pmatrix}
 \mathbf{a}_1 \\
 \mathbf{a}_2 \\
@@ -90,7 +91,9 @@ B =
 \vdots \\
 \mathbf{a}_m B
 \end{pmatrix}
+\end{aligned}
 $$
+
 
 ### Invertible Matrices
 
@@ -119,16 +122,18 @@ Let **A** be an invertible matrix of order n.
 
 * For 2×2 matrices, $\mathbf{A} = \left( \begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \right)$, $\det(\mathbf{A}) = ad - bc$.
 * For higher powers, use cofactor expansion:
-    1. $$
-        \begin{pmatrix}
-        + & - & + & \cdots & \cdots \\
-        - & + & - & \cdots & \cdots \\
-        + & - & + & \cdots & \cdots \\
-        \vdots & \vdots & \vdots & \ddots & \vdots \\
-        \cdots & \cdots & \cdots & \cdots & \cdot
-        \end{pmatrix}
-        $$
- (Remember to check the sign!)
+
+  $$ 
+  \begin{pmatrix}
+  + & - & + & \cdots & \cdots \\
+  - & + & - & \cdots & \cdots \\
+  + & - & + & \cdots & \cdots \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+  \cdots & \cdots & \cdots & \cdots & \cdot
+  \end{pmatrix}
+  $$
+
+  (Remember to check the sign!)
 
 ### Properties of Determinant
 
