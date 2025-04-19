@@ -1,8 +1,3 @@
----
-layout: default
-title: MA1508E
----
-
 # MA1508E Formulae, Theorems and Definitions
 
 ## Table of Contents
@@ -59,16 +54,16 @@ Adding on to 1. and 2.,
 * **A**(**B** + **C**) = **AB** + **AC** (Left Distributive Law)
 * (**A** + **B**)**C** = **AC** + **BC** (Right Distributive Law)
 * _c_(**AB**) = (_c_**A**)**B** = **A**(_c_**B**) (Commute with scalar multiplication)
-* For any _m x n_ matrix **A**, **I$_{m}$A** = **A** = **AI**$_{n}$
+* For any _m x n_ matrix **A**, **I<sub>m</sub>A** = **A** = **AI<sub>n</sub>**
 * If **AB** = **0**<sub>m x n</sub>, **A** and **B** can both be **nonzero**
 
 ### Properties of Transpose
 
-* (**A**$^{T}$)$^{T}$ = **A**
-* (_c_**A**)$^{T}$ = _c_**A**$^{T}$
-* (**A** + **B**)$^{T}$ = **A**$^{T}$ + **B**$^{T}$
-* (**AB**)$^{T}$ = **B**$^{T}$**A**$^{T}$
-* If **A** is **symmetric**, **A**$^{T}$ = **A**
+* (**A**<suP>T</sup>)<sup>T</sup> = **A**
+* (_c_**A**)<sup>T</sup> = _c_**A**<sup>T</sup>
+* (**A** + **B**)<sup>T</sup>= **A**<sup>T</sup> + **B**<sup>T</sup>
+* (**AB**)<sup>T</sup> = **B**<sup>T</sup>**A**<sup>T</sup>
+* If **A** is **symmetric**, **A**<sup>T</sup> = **A**
 
 ### Block Multiplication
 
@@ -95,10 +90,10 @@ Adding on to 1. and 2.,
 
 Let **A** be an invertible matrix of order n.
 
-* (**A**$^{-1}$)$^{-1}$ = **A**
-* (*a***A**)$^{-1}$ = $\frac{1}{a}$**A**$^{-1}$
-* (**A**$^{T}$)$^{-1}$ = (**A**$^{-1}$)$^{T}$
-* (**AB**)$^{-1}$ = **B**$^{-1}$**A**$^{-1}$
+* (**A**<sup>-1</sup>)<sup>-1</sup> = **A**
+* (*a***A**)<sup>-1</sup> = $\frac{1}{a}$**A**<sup>-1</sup>
+* (**A**<sup>T</sup>)<sup>-1</sup> = (**A**<sup>-1</sup>)<sup>T</sup>
+* (**AB**)<sup>-1</sup> = **B**<sup>-1</sup>**A**<sup>-1</sup>
 
 ### Elementary Matrices
 
@@ -108,7 +103,7 @@ Let **A** be an invertible matrix of order n.
 
 * **E**: *R<sub>i</sub>* + *cR<sub>j</sub>*, **E<sup>-1</sup>**: *R<sub>i</sub>* - *cR<sub>j</sub>*
 * **E**: *R<sub>i</sub>* ↔ *R<sub>j</sub>*, **E**<sup>-1</sup>: *R<sub>i</sub>* ↔ *R<sub>j</sub>* (same matrix!)
-* **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: \(\frac{1}{c}\)R<sub>i</sub>
+* **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: $\frac{1}{c}$*R<sub>i</sub>*
 
 ### Determinant
 
@@ -132,9 +127,9 @@ Let **A** be a square matrix.
 
 ### Determinant of Elementary Row Operations
 
-* **E**: *R$_{i}$* + *cR$_{j}$* → det(**E**) = 1
-* **E**: *R$_{i}$* ↔ *R$_{j}$* → det(**E**) = -1
-* **E**: *cR$_{j}$* → det(**E**) = c
+* **E**: *R<sub>i</sub>* + *cR<sub>i</sub>* → det(**E**) = 1
+* **E**: *R<sub>i</sub>* ↔ *R<sub>i</sub>* → det(**E**) = -1
+* **E**: *cR<sub>i</sub>* → det(**E**) = c
 
 ## Euclidean Vector Spaces
 
