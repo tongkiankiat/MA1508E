@@ -2,14 +2,6 @@
 layout: default
 title: MA1508E
 ---
-<p>Test custom layout</p>
-Inline math: \( a^2 + b^2 = c^2 \)
-
-Display math:
-
-$$
-\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
-$$
 # MA1508E Formulae, Theorems and Definitions
 
 ## Table of Contents
@@ -79,13 +71,8 @@ Adding on to 1. and 2.,
 
 ### Block Multiplication
 
-* 
-```math
-AB = A \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \cdots & \mathbf{b}_n \end{pmatrix} = \begin{pmatrix} A\mathbf{b}_1 & A\mathbf{b}_2 & \cdots & A\mathbf{b}_n \end{pmatrix}
-```
-* 
-```math
-AB = \begin{pmatrix}
+* $AB = A \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \cdots & \mathbf{b}_n \end{pmatrix} = \begin{pmatrix} A\mathbf{b}_1 & A\mathbf{b}_2 & \cdots & A\mathbf{b}_n \end{pmatrix}$
+* $AB = \begin{pmatrix}
 \mathbf{a}_1 \\
 \mathbf{a}_2 \\
 \vdots \\
@@ -97,8 +84,7 @@ B =
 \mathbf{a}_2 B \\
 \vdots \\
 \mathbf{a}_m B
-\end{pmatrix}
-```
+\end{pmatrix}$
 
 ### Invertible Matrices
 
@@ -125,15 +111,16 @@ Let **A** be an invertible matrix of order n.
 
 ### Determinant
 
-* For 2x2 matrices, $\mathbf{A} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, $\det(\mathbf{A}) = ad - bc$.
+* For 2x2 matrices, $\mathbf{A} = \left( \begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \right)$
+, $\det(\mathbf{A}) = ad - bc$.
 * For higher powers, use cofactor expansion:
-    1. `$\begin{pmatrix}
+    1. $\begin{pmatrix}
        \text{+} & \text{-} & \text{+} & \cdots & \cdots \\
        \text{-} & \text{+} & \text{-} & \cdots & \cdots \\
        \text{+} & \text{-} & \text{+} & \cdots & \cdots \\
        \vdots & \vdots & \vdots & \ddots & \vdots \\
        \cdots & \cdots & \cdots & \cdots & \cdot
-       \end{pmatrix}$` (Remember to check the sign!)
+       \end{pmatrix}$ (Remember to check the sign!)
 
 ### Properties of Determinant
 
