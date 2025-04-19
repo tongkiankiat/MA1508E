@@ -112,15 +112,15 @@ Let **A** be an invertible matrix of order n.
 
 ### Determinant
 
-* For 2x2 matrices, $`\mathbf{A} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}`$, $`\det(\mathbf{A}) = ad - bc`$.
+* For 2x2 matrices, `$\mathbf{A} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$`, `$\det(\mathbf{A}) = ad - bc$`.
 * For higher powers, use cofactor expansion:
-    1. $`\begin{pmatrix}
+    1. `$\begin{pmatrix}
        \text{+} & \text{-} & \text{+} & \cdots & \cdots \\
        \text{-} & \text{+} & \text{-} & \cdots & \cdots \\
        \text{+} & \text{-} & \text{+} & \cdots & \cdots \\
        \vdots & \vdots & \vdots & \ddots & \vdots \\
        \cdots & \cdots & \cdots & \cdots & \cdot
-       \end{pmatrix}`$ (Remember to check the sign!)
+       \end{pmatrix}$` (Remember to check the sign!)
 
 ### Properties of Determinant
 
