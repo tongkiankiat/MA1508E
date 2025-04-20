@@ -297,7 +297,86 @@ Let **A** be an *m* x *n* matrix, and **R** = *rref*(**A**).
 
 ## Orthogonality, Projection, and LSS
 
+### Orthogonal
+Two vectors **u** , **v** in $\mathbb{R}^n$ are *orthogonal* if:
+* **u** $\cdot$ **v** = 0
+    * Case 1: **u** = **0** or **v** = **0**
+    * Caes 2: $\cos(\theta) = \frac{\mathbf{u} \cdot \mathbf{v}}{\lVert \mathbf{u} \rVert \lVert \mathbf{v} \rVert}$ tells us that $\theta$ = $\frac{\pi}{2}$ (i.e. **u** and **v** are *perpendicular*)
 
+### Orthogonal Sets
+The set *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*k*</sub>} is orthogonal if:
+* **v**<sub>i</sub> $\cdot$ **v**<sub>j</sub> = 0, if *i* $\neq$ *j*  
+
+Orthogonal Sets can contain the zero vector **0**
+
+### Orthonormal Sets
+The set *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*k*</sub>} is orthonormal if:
+* **v**<sub>i</sub> $\cdot$ **v**<sub>j</sub> = 0, if *i* $\neq$ *j*
+* **v**<sub>i</sub> $\cdot$ **v**<sub>j</sub> = 1, if *i* $=$ *j*  
+
+Orthonormal Sets **cannot** contain the zero vector **0**
+
+### To check for (if a set is) Orthogonal to Subspace
+Let *V* be a subspace of $\mathbb{R}^n$, and **A** = (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*k*</sub>)
+* **w** is orthogonal to *V* *if and only if* **w** $\in$ Null(**A**<sup>*T*</sup>) (note the transpose!)
+
+### Orthogonal Complement
+The orthogonal complement of $V$ is the set of all vectors that are *orthogonal* to $V$
+* $V^\perp$ = Null(**A**<sup>*T*</sup>)
+
+### Orthogonal and Orthonormal Basis
+* An orthogonal/orthonormal basis is also **linearly independent**
+
+### Coordinates Relative to an Orthogonal Basis
+Let *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*k*</sub>} be an *orthogonal* basis for subspace *V*, and **v** $\in$ *V*
+![coordinates_orthogonal_basis](images/coordinates_orthogonal_basis.png)
+
+### Coordinates Relative to an Orthonormal Basis
+Let *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*k*</sub>} be an *orthonormal* basis for subspace *V*, and **v** $\in$ *V*
+![coordinates_orthonormal_basis](images/coordinates_orthonormal_basis.png)
+
+### To check if a set is orthogonal or orthonormal
+Let *S* be the set to check, where *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*k*</sub>}, and **A** = {**v**<sub>1</sub> **v**<sub>2</sub> ... **v**<sub>*k*</sub>}
+* If *S* is *orthogonal*, **A**<sup>*T*</sup>**A** is a *diagonal* matrix
+* If *S* is *orthonormal*, **A**<sup>*T*</sup>**A** is the *identity* matrix (= **I**)
+
+### Orthogonal Matrices
+* A square matrix **A** is *orthogonal* if **A**<sup>*T*</sup> = **A**<sup>-1</sup> or **A**<sup>*T*</sup>**A** = **I** = **AA**<sup>*T*</sup>
+    * The *columns* of **A** form an *orthonormal basis* for $\mathbb{R}^n$
+    * The *rows* of **A** form an *orthonormal basis* for $\mathbb{R}^n$
+
+### Orthogonal Projection
+Let *V* be a subspace of $\mathbb{R}^n$, every vector *w* in $\mathbb{R}^n$ can be decomposed **uniquely** as:
+* **w** = **w**<sub>*p*</sub> + **w**<sub>*n*</sub>
+    * **w**<sub>*n*</sub> is *orthogonal* to *V*, and **w**<sub>*p*</sub> is a vector in *V*
+* To find **w**<sub>*p*</sub>, where *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*k*</sub>} is an *orthogonal basis* for *V*:
+    * $$\mathbf{w}_p = \frac{\mathbf{w} \cdot \mathbf{u}_1}{\mathbf{u}_1 \cdot \mathbf{u}_1} \mathbf{u}_1 + \frac{\mathbf{w} \cdot \mathbf{u}_2}{\mathbf{u}_2 \cdot \mathbf{u}_2} \mathbf{u}_2 + \cdots + \frac{\mathbf{w} \cdot \mathbf{u}_k}{\mathbf{u}_k \cdot \mathbf{u}_k} \mathbf{u}_k
+    $$
+    * IMPT: *S* must be **orthogonal or orthonormal!**
+
+However, if possible, try and use [LSS Formula](#orthogonal-projection-using-lss) instead! It is much faster
+
+![orthogonal_projection](images/orthogonal_projection.png)
+
+### Gram Schmidt Process
+Let *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*k*</sub>} be a **linearly independent** set
+![gram_schmidt](images/gram_schmidt.png)
+* Note that the resultant set is **not noramalised yet**, so we have to normalise ourselves
+* The MATLAB code given will give an **orthogonal set**, so remember to normalise after!
+
+### Least Squares Approximation
+Let **A** be an *m* x *n* matrix and **b** a vector in $\mathbb{R}^m$
+* **u** is a **least squares solution** to **Ax** = **b** *if and only if* **Au** is the *projection* of *b* onto Col(**A**)
+* **u** is a **least squares solution** to **Ax** = **b** *if and only if* **u** is a *solution* to **A**<sup>*T*</sup>**Ax** = **A**<sup>*T*</sup>**b**  
+
+![LSS](images/LSS.png)
+
+### Orthogonal Projection using LSS
+Let *V* be a subspace, and *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} be a *basis* for *V*, **w**<sub>*p*</sub> is the *projection* of **w** onto *V*
+* **w**<sub>*p*</sub> = **Au** = **A**(**A**<sup>*T*</sup>**A**)<sup>-1</sup>**A**<sup>*T*</sup>**w**
+    * **A** = (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*k*</sub>)  
+
+A neat fact about this method is that we **do not need an orthogonal/orthonormal basis** to find the projection, whereas with the [original projection formula](#orthogonal-projection), we need an **orthogonal or orthonormal** basis
 
 ## Eigenanalysis
 
