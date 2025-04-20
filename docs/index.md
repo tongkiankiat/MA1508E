@@ -285,7 +285,7 @@ Let **A** be an *m* x *n* matrix, and **R** = *rref*(**A**).
 * *Row*(**A**) = $\mathbb{R}^n$
 * Columns of **A** are linearly independent
 * **Ax** = **0** has only the *trivial solution*, Null(**A**) = {**0**}
-* **A**<sup>*T*</sup> is an *invertible matrix* of order *n*
+* **A**<sup>*T*</sup>**A** is an *invertible matrix* of order *n*
 * **A** has a left inverse
 
 ### Full Rank = *m* (no. of rows)
@@ -565,7 +565,7 @@ Let **A** be a square matrix of order *n*
 * *Row*(**A**) = $\mathbb{R}^n$
 * Columns of **A** are linearly independent
 * **Ax** = **0** has only the *trivial solution*, Null(**A**) = {**0**}
-* **A**<sup>*T*</sup> is an *invertible matrix* of order *n*
+* **A**<sup>*T*</sup>**A** is an *invertible matrix* of order *n*
 * **A** has a left inverse
 
 ### Full Rank for Rows
