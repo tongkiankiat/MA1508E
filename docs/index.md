@@ -128,7 +128,7 @@ Let **A** be an invertible matrix of order n.
 
 ### Determinant
 
-* For 2×2 matrices, $\det(\mathbf{A}) = ad - bc$.
+* For 2×2 matrices, **A** = $ \begin{pmatrix} a & b  \\ c & d  \end{pmatrix} $ $\det(\mathbf{A}) = ad - bc$.
 * For higher powers, use cofactor expansion (Remember to check the sign!):
 
   $$ 
@@ -185,19 +185,70 @@ Angle definition for Dot Product
 * (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>k</sub> | **v**) is **consistent**
 
 ### To check if span(S) = $\R^n$
-* RREF of (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>k</sub>) has no zero rows
+* *rref*(**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>k</sub>) has no zero rows
 
 ### Properties of Linear Spans
-* Zero vector **0** is in span(*S*)
-* $\alpha$ **u** $\in$ span(*S*)
-* **u** + **v** $\in$ span(*S*)<br>
+1. Zero vector **0** is in span(*S*)
+2. $\alpha$ **u** $\in$ span(*S*)
+3. **u** + **v** $\in$ span(*S*)<br>
 
 We can combine 2. and 3. and check: $\alpha$ **u** + $\beta$ **v** $\in$ span(*S*) (sometimes this is harder though, so just pick whichever is easier)
 
 ### To check for Set Relations between Spans ()
 * (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*S*</sub> | **v**<sub>1</sub> | **v**<sub>2</sub> | ... | **v**<sub>*T*</sub>) is **consistent** → span(*T*) $\subseteq$ span(*S*)
 
-## Subspaces
+### Subspaces
+If **V** is a *subspace*:
+1. Zero vector **0** is in **V**
+2. $\alpha$ **u** $\in$ **V**
+3. **u** + **v** $\in$ **V**<br>
+
+We can combine 2. and 3. and check: $\alpha$ **u** + $\beta$ **v** $\in$ **V** (sometimes this is harder though, so just pick whichever is easier)
+ * Further notes:
+    * We can express **V** = span(*S*) for some finite set *S* (**IMPT and useful result**)
+    * Only **homogeneous** linear systems are subspaces (i.e. **Ax** = **b**, where **b** = **0**)
+
+### Linear Independence
+Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>}, then *S* is **linearly independent** if:
+* *c*<sub>1</sub>**u**<sub>1</sub> + *c*<sub>2</sub>**u**<sub>2</sub> + ... + *c*<sub>*k*</sub>**u**<sub>*k*</sub> = **0** can only be satisfied by *c*<sub>1</sub> = *c*<sub>2</sub> = ... = *c*<sub>*k*</sub> = 0
+    * *rref*(*S*) = **I** → *S* is **linearly independent**
+
+### To check for linear independence
+Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>}
+* *rref*(*S*) has **no non-pivot columns**
+
+### Basis
+A set *S* is a basis for **V** if:
+* span(*S*) = **V**
+* *S* is linearly independent
+
+Note: The basis of a zero space {**0**} is the empty set $\empty$
+
+### Other ways to check for Basis
+* B1
+    * |*S*| = *dim*(*V*)
+    * *S* $\subseteq$ *V*
+    * *S* is linearly independent
+* B2
+    * |*S*| = *dim*(*V*)
+    * *V* $\subseteq$ span(*S*)
+
+### Coordinates relative to a Basis (or Set)
+Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} be a basis for *V*, and **v** = *c*<sub>1</sub>**u**<sub>1</sub> + *c*<sub>2</sub>**u**<sub>2</sub> + ... + *c*<sub>*k*</sub>**u**<sub>*k*</sub> be the **unique** representation of **v** $\in$ *V*
+* $[\mathbf{v}]_S = \begin{pmatrix} c_1 \\ c_2 \\ \vdots \\ c_k \end{pmatrix}$
+
+### To compute coordinates relative to a Basis (or Set)
+* Solve the linear system: (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*k*</sub> | **v**)
+
+### Dimensions
+* *dim*(*V*): Number of vectors in any *basis* of *V*
+* *dim*({**0**}) = 0
+
+<div style="page-break-after: always;"></div>
+
+## Subspaces Associated to a Matrix
+
+### 
 
 ## Orthogonality, Projection, and LSS
 
