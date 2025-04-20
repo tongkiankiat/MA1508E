@@ -4,10 +4,11 @@ title: MA1508E
 ---
 # MA1508E Formulae, Theorems and Definitions
 
-## Note
+## Notes
 * I have added in parentheses (...) some additional keywords at some headers for easier lookup for some theorems/definitions/formulae.
 * If there are any more defintions or theorems you wish to add, create an issue or let me know directly!
-* There are **VERY** important lists/properties I have compiled [here](...), and have also scattered the link throughout the document to send you there directly, but they are also in their own individual sections.
+* There are **VERY** important lists/properties I have compiled [here](#full-invertibility-list-invertible-matrix-properties), and have also scattered the link throughout the document to send you there directly, but they are also in their own individual sections.
+* The order of theorems/definitions might also not follow exactly the order in which they were taught, I mostly grouped them together based on how well they flow.
 
 ## Table of Contents
 
@@ -18,6 +19,7 @@ title: MA1508E
 5. **[Chapter 5: Orthogonality, Projection, and Least Square Solution](#orthogonality-projection-and-lss)**
 6. **[Chapter 6: Eigenanalysis](#eigenanalysis)**
 7. **[Chapter 7: System of Linear Differential Equations](#system-of-linear-differential-equations)**
+8. **[Important Lists](#full-invertibility-list-invertible-matrix-properties)**
 
 <div style="page-break-after: always;"></div>
 
@@ -105,7 +107,7 @@ $$
 
 ### Invertible Matrices
 
-[Final Invertible List](...)
+[Full Invertibility List](#full-invertibility-list-invertible-matrix-properties)
 
 ### Properties of Invertible Matrices
 
@@ -378,6 +380,197 @@ Let *V* be a subspace, and *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u
 
 A neat fact about this method is that we **do not need an orthogonal/orthonormal basis** to find the projection, whereas with the [original projection formula](#orthogonal-projection), we need an **orthogonal or orthonormal** basis
 
+<div style="page-break-after: always;"></div>
+
 ## Eigenanalysis
 
+### Eigenvalues and Eigenvectors
+Let **A** be a square matrix of order *n*
+* **Av** = $\lambda$**v**
+    * **v** is the *eigenvector* associated to *eigenvalue* $\lambda$
+    * **v** $\neq$ **0**
+
+### Characteristic Polynomial
+To obtain the eigenvalues of a square matrix **A** of order *n*, we solve the characteristic polynomial char(**A**) = 0
+* char(**A**) = det(*x***I** - **A**)
+    * char(**A**) is a polynomial of degree *n*, same as the order of **A**
+
+### Eigenvalues of Triangular Matrices
+* The eigenvalues of a *triangular matrix* are its **diagonal entries**
+* THe *algebraic multiplicity* of the eigenvalue is the no. of times it appears as a diagonal entry of **A**
+
+### Eigenspace
+* The *eigenspace* associated to *eigenvalue* $\lambda$ of **A** is $E_\lambda$ = Null($\lambda$**I** - **A**)
+    * Solving ($\lambda$**I** - **A**)*x* = **0**
+
+### Independence of Eigenspaces
+* Eigenspaces of different *eigenvalues* are **linearly independent**
+    * The **union** of the eigenspaces is **linearly independent**
+
+### Algebraic Multiplicity
+* *Algebraic multiplicity* of $\lambda$ is the **largest** integer *r* such that det(*x***I** - **A**) = (*x* - $\lambda)^r$ *p*(*x*)
+
+### Geometric Multiplicity
+* The dimension of the eigenspace of that eigenvector: dim($E_\lambda$) = nullity($\lambda$**I** - **A**)
+
+### Diagonalisation
+* A square matrix **A** is *diagonalizable* if **A** = **PDP**<sup>-1</sup>, where **P** is *invertible*, and **D** is *diagonal*
+
+### Properties of Diagonalisable Matrices
+* **A** is *diagonalisable*
+* The *eigenvectors* of **A** form a *basis* {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} of $\mathbb{R}^n$
+* char(**A**) splits into **linear factors** (so there are no *x*$^n$ terms):
+    * det(*x***I** - **A**) = (*x* - $\lambda_1$)$^{r_{\lambda_1}}$ (*x* - $\lambda_2$)$^{r_{\lambda_2}}$ ... (*x* - $\lambda_k$)$^{r_{\lambda_k}}$
+    * dim($E_{{\lambda_i}}$) = $r_{\lambda_i}$ (Algebraic Multiplicity = Geometric Multiplicity for all eigenvalues ${\lambda_i}$)
+* **A** has *n* distinct *eigenvalues*
+
+### To diagonalise a matrix
+Let **A** be an order *n* square matrix
+* Compute det(*x***I** - **A**) = 0 to get the *eigenvalues*
+* For each eigenvalue $\lambda_i$, solve the system ($\lambda_i$**I** - **A**)*x* = 0
+    * Start from the eigenvalue with the **highest algebraic multiplicity**, and ensure that every eigenvalue has *geometric multiplicity* = *algebraic multiplicity* (This is so that we can reject a non-diagonalisable matrix earlier)
+* Form matrix **P**, where every column corresponds to an *eigenvector*. The corresponding column in **D** must contain the *eigenvalue* for that *eigenvector* in **P**
+
+### Orthogonally Diagonalisable
+Let **A** be an order *n* square matrix
+* **A** is *orthogonally diagonalisable* if **A** = **PDP**<sup>*T*</sup>
+    * **P** must be **orthogonal** and **D** is **diagonal**
+    * Since **P** is **orthogonal**, **P**<sup>*T*</sup> = **P**<sup>-1</sup>, so **A** = **PDP**<sup>*T*</sup> = **PDP**<sup>-1</sup>
+
+### Spectral Theorem (For Symmetric Matrices)
+* **A** is **orthogonally diagonalisable** *if and only if* **A** is **symmetric**
+
+### Properties of Orthogonally Diagonalisable Matrices
+* **A** is *orthogonally diagonalisable*
+* The *eigenvectors* of **A** form an **orthonormal basis** {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} of $\mathbb{R}^n$
+* **A** is *symmetric*
+
+### Eigenspaces of a Symmetric Matrix (Orthogonally Diagonalisable Matrix) are Orthogonal
+* If **A** is *symmetric*, then the *eigenspaces* are **orthogonal** to each other
+    * Dot product of *eigenvectors* from *different* *eigenspaces* = 0
+
+### To orthogonally diagonalise a matrix
+Let **A** be an order *n* square matrix
+* Compute det(*x***I** - **A**) = 0 to get the *eigenvalues*
+* For each eigenvalue $\lambda_i$, solve the system ($\lambda_i$**I** - **A**)*x* = 0
+* For every eigenspace, check that the set is **orthogonal**
+    * If the eigenspace is not, then perform **Gram-Schmidt**
+    * Else, **normalise** the vectors
+* Form matrix **P**, where every column corresponds to an *eigenvector*. The corresponding column in **D** must contain the *eigenvalue* for that *eigenvector* in **P**
+    * Note that every column is a **normalised vector**, and they are all **orthogonal** to one another
+
+### Powers of Diagonalisable Matrices
+* Given **A** = **PDP**<sup>-1</sup>, **A**<sup>*n*</sup> = **PD**<sup>*n*</sup>**P**<sup>-1</sup>
+
+### Stochastic Matrix (Markov Chain)
+* A square matrix whose columns are *probability vectors*, meaning the entries of each column are **nonnegative**, and they **sum up to 1**
+
+### Properties of a Stochastic Matrix
+* 1 is always an *eigenvalue* of a stochastic matrix
+* For every column, its entries all **sum up to 1**
+* For every column, its entries are all **nonnegative** (probabilities are >= 0 and <= 1)
+
+### Markov Chain
+* A sequence of *probability vectors* **x**<sub>0</sub>, **x**<sub>1</sub>, ..., **x**<sub>*k*</sub>, ..., together with a *stochastic matrix* **P** such that
+    * **x**<sub>*k*</sub> = **Px**<sub>*k*-1</sub> = **P**<sup>*k*</sup>**x**<sub>0</sub>
+* If a Markov Chain **converges** it converges to an *equilibrium vector*
+    * An *equilibrium vector* is a vector with eigenvalue of 1
+
+### To compute equilibrium vector
+Let **P** be an order *n* stochastic matrix
+* Find eigenvector **u** corresponding to eigenvalue $\lambda$ = 1 by solving the system (**I** - **P**)**x** = **0**
+* Write the *equilibrium vector* **v** = $\frac{1}{\sum_{k=1}^{n} u_k}$ **u**
+    * Divide **u** by the sum of all its entries to get the *equilibrium vector* **v**
+
+<div style="page-break-after: always;"></div>
+
 ## System of Linear Differential Equations
+
+### Note
+For this chapter, we are solving **homogeneous** linear differential equations of the form **y**'(*t*) = **Ay**(*t*)
+
+### Solutions to System of Differential Equations
+Suppose **v** is an *eigenvector* with *eigenvalue* $\lambda$ of matrix **A**
+* **x**(*t*) = **v***e*$^{\lambda t}$ is a *solution* to **y**' = **Ay**
+
+### Superposition Principle
+* If **x**<sub>1</sub>(*t*) and **x**<sub>2</sub>(*t*) are *solutions* to **y**' = **Ay**, $\alpha$**x**<sub>1</sub>(*t*) + $\beta$**x**<sub>2</sub>(*t*) is also a solution
+
+### Linear Independence of Solutions (Wronskian)
+* If Wronskian $\neq$ 0, the solution set *S* is **linearly independent**
+* However, if *S* is **linearly independent**, Wronskian **may also be 0**
+* Thus, we find the solution set *S*, then verify that the Wronskian $\neq$ 0, **not the other way round**
+
+### Fundamental Set of Solutions for Diagonalisable **A**
+Let **A** be a *diagonalisable* matrix, and **v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>n</sub> be *n* *linearly independent eigenvectors* associated to (real) *eigenvalues* $\lambda_1$, $\lambda_2$, ..., $\lambda_n$ (not necessarily distinct)
+* The fundamental set of solutions for **A** is {**v**<sub>1</sub>*e*$^{{\lambda_1} t}$, **v**<sub>2</sub>*e*$^{{\lambda_2} t}$, ..., **v**<sub>*n*</sub>*e*$^{{\lambda_n} t}$}
+* The general solution for **A** is **x**(*t*) = *c*<sub>1</sub>**v**<sub>1</sub>*e*$^{{\lambda_1} t}$ + *c*<sub>2</sub>**v**<sub>2</sub>*e*$^{{\lambda_2} t}$ + ... + *c*<sub>*n*</sub>**v**<sub>*n*</sub>*e*$^{{\lambda_n} t}$
+
+### Complex Eigenvalues and Eigenvectors
+Everything on eigenvalues and eigenvectors before this focused on **real** eigenvalues and eigenvectors, now we talk about **complex** eigenvalues and eigenvectors.
+
+Even though we are talking about complex eigenvalues, the matrix **A** is still **REAL**
+
+Let **A** be an order *n* square matrix with **real entries**
+* The *complex eigenvalues* of **A** comes in *conjugate pairs*
+    * If $\lambda$ is an *eigenvalue* of **A**, $\bar{\lambda}$ is also an *eigenvalue*
+* The *eigenvectors* are also conjugates
+    * If **v** $\in \mathbb{C}$ is an *eigenvector* associated to *eigenvalue* $\lambda$, $\bar{\mathbf{v}}$ is an *eigenvector* associated to *eigenvalue* $\bar{\lambda}$
+    * This means that we don't have to calculate again to get $\bar{\mathbf{v}}$!
+
+### Real Solutions from Complex Solution
+Suppose $\lambda$ $\in$ $\mathbb{C}$ is a *complex eigenvalue* of **A** with *complex eigenvector* **v** $\in$ $\mathbb{C}^n$, with *e*$^{\lambda t}$**v** = **x**<sub>*r*</sub>(*t*) + **x**<sub>*i*</sub>(*t*)
+* {**x**<sub>*r*</sub>(*t*), **x**<sub>*i*</sub>(*t*)} is part of the *fundamental set of solutions* for **A**
+* **x** = *c*<sub>1</sub>**x**<sub>1</sub>(*t*) + *c*<sub>2</sub>**x**<sub>2</sub>(*t*)
+     * **x**<sub>*r*</sub>(*t*) = *e*$^{{\lambda_r} t}\cos(\lambda_i t)$**v**<sub>*r*</sub> - $\sin(\lambda_i t)$**v**<sub>*i*</sub>)
+     * **x**<sub>*i*</sub>(*t*) = *e*$^{{\lambda_r} t}\sin(\lambda_i t)$**v**<sub>*r*</sub> - $\cos(\lambda_i t)$**v**<sub>*i*</sub>)
+     * $\lambda$ = $\lambda_r$ + *i*$\lambda_i$, **v** = **v**<sub>*r*</sub> + *i***v**<sub>*i*</sub>
+
+### Repeated Eigenvector and Generalised Eigenvector
+* An *eigenvalue* $\lambda$ of **A** is a *repeated eigenvalue* if the *algebraic multiplicity* of $\lambda$ > 1
+    * *r*$_\lambda$ > 1
+* If **v**<sub>1</sub> is an *eigenvector* associated to $\lambda$, **v**<sub>2</sub> is a *generalised eigenvector* associated to $\lambda$ if it is a solution to (**A** - $\lambda$**I**)**x** = **v**<sub>1</sub>
+* We find the *generalised eigenvector* if dim(*E*$_\lambda$) < *r*$_\lambda$
+
+### Solutions from Repeated Eigenvector and Generalised Eigenvector
+Let **v**<sub>1</sub> be the *eigenvector* associated with *repeated eigenvalue* $\lambda$, and **v**<sub>2</sub> be the *generalised eigenvector*
+* {**x**<sub>1</sub>(*t*), **x**<sub>2</sub>(*t*)} forms a *fundamental set of solutions* for **y**' = **Ay**
+    * Remember to check Wronskian still!
+
+### Particular Solutions and General Solutions
+* General Solutions are of the form **x**(*t*) = *c*<sub>1</sub>**v**<sub>1</sub>*e*$^{{\lambda_1} t}$ + *c*<sub>2</sub>**v**<sub>2</sub>*e*$^{{\lambda_2} t}$ + ... + *c*<sub>*n*</sub>**v**<sub>*n*</sub>*e*$^{{\lambda_n} t}$
+* To find the particular solution, we use the given initial conditions, which could be something like **x**(0) = 0, ...
+    * This allows us to solve for the constants *c*<sub>*i*</sub>
+
+### Full Invertibility List (Invertible Matrix Properties)
+Let **A** be a square matrix of order *n*
+1. **A** is *invertible*
+2. **A**<sup>*T*</sup> is *invertible*
+3. **BA** = **I**
+4. **AB** = **I**
+5. *rref*(**A**) = **I**
+6. **A** can be expressed as a product of *elementary matrices*
+7. **Ax** = **0** has *only the trivial solution* (**x** = **0**)
+8. For *any* **b**, **Ax** = **b** has a *unique solution*
+9. det(**A**) $\neq$ 0
+10. Columns/Rows of **A** are **linearly independent**
+11. Columns/Rows of **A** *spans* $\mathbb{R}^n$
+12. rank(**A**) = *n*(**A** has full rank)
+13. nullity(**A**) = 0
+14. 0 is **not** an *eigenvalue* of **A**
+
+### Full Rank for Columns
+* rank(**A**) = n
+* *Row*(**A**) = $\mathbb{R}^n$
+* Columns of **A** are linearly independent
+* **Ax** = **0** has only the *trivial solution*, Null(**A**) = {**0**}
+* **A**<sup>*T*</sup> is an *invertible matrix* of order *n*
+* **A** has a left inverse
+
+### Full Rank for Rows
+* rank(**A**) = *m*
+* *Col*(**A**) = $\mathbb{R}^m$
+* Rows of **A** are linearly independent
+* **Ax** = **b** is consistent for *every* **b** $\in$ $\mathbb{R}^m$
+* **AA**<sup>*T*</sup> is an *invertible* matrix of order *m*
+* **A** has a right inverse
