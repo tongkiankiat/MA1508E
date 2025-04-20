@@ -421,7 +421,7 @@ To obtain the eigenvalues of a square matrix **A** of order *n*, we solve the ch
 * The *eigenvectors* of **A** form a *basis* {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} of $\mathbb{R}^n$
 * char(**A**) splits into **linear factors** (so there are no *x*$^n$ terms):
     * det(*x***I** - **A**) = (*x* - $\lambda_1$)$^{r_{\lambda_1}}$ (*x* - $\lambda_2$)$^{r_{\lambda_2}}$ ... (*x* - $\lambda_k$)$^{r_{\lambda_k}}$
-    * dim($E_{{\lambda_i}}$) = $r_{\lambda_i}$ (Algebraic Multiplicity = Geometric Multiplicity for all eigenvalues ${\lambda_i}$)
+    * dim($E_{\lambda_i}$) = $r_{\lambda_i}$ (Algebraic Multiplicity = Geometric Multiplicity for all eigenvalues ${\lambda_i}$)
 * **A** has *n* distinct *eigenvalues*
 
 ### To diagonalise a matrix
@@ -503,8 +503,8 @@ Suppose **v** is an *eigenvector* with *eigenvalue* $\lambda$ of matrix **A**
 
 ### Fundamental Set of Solutions for Diagonalisable **A**
 Let **A** be a *diagonalisable* matrix, and **v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>n</sub> be *n* *linearly independent eigenvectors* associated to (real) *eigenvalues* $\lambda_1$, $\lambda_2$, ..., $\lambda_n$ (not necessarily distinct)
-* The fundamental set of solutions for **A** is {**v**<sub>1</sub>*e*$^{{\lambda_1} t}$, **v**<sub>2</sub>*e*$^{{\lambda_2} t}$, ..., **v**<sub>*n*</sub>*e*$^{{\lambda_n} t}$}
-* The general solution for **A** is **x**(*t*) = *c*<sub>1</sub>**v**<sub>1</sub>*e*$^{{\lambda_1} t}$ + *c*<sub>2</sub>**v**<sub>2</sub>*e*$^{{\lambda_2} t}$ + ... + *c*<sub>*n*</sub>**v**<sub>*n*</sub>*e*$^{{\lambda_n} t}$
+* The fundamental set of solutions for **A** is {**v**<sub>1</sub>*e*$^{\lambda_1 t}$, **v**<sub>2</sub>*e*$^{\lambda_2 t}$, ..., **v**<sub>*n*</sub>*e*$^{\lambda_n t}$}
+* The general solution for **A** is **x**(*t*) = *c*<sub>1</sub>**v**<sub>1</sub>*e*$^{\lambda_1 t}$ + *c*<sub>2</sub>**v**<sub>2</sub>*e*$^{\lambda_2 t}$ + ... + *c*<sub>*n*</sub>**v**<sub>*n*</sub>*e*$^{\lambda_n t}$
 
 ### Complex Eigenvalues and Eigenvectors
 Everything on eigenvalues and eigenvectors before this focused on **real** eigenvalues and eigenvectors, now we talk about **complex** eigenvalues and eigenvectors.
@@ -522,8 +522,8 @@ Let **A** be an order *n* square matrix with **real entries**
 Suppose $\lambda$ $\in$ $\mathbb{C}$ is a *complex eigenvalue* of **A** with *complex eigenvector* **v** $\in$ $\mathbb{C}^n$, with *e*$^{\lambda t}$**v** = **x**<sub>*r*</sub>(*t*) + **x**<sub>*i*</sub>(*t*)
 * {**x**<sub>*r*</sub>(*t*), **x**<sub>*i*</sub>(*t*)} is part of the *fundamental set of solutions* for **A**
 * **x** = *c*<sub>1</sub>**x**<sub>1</sub>(*t*) + *c*<sub>2</sub>**x**<sub>2</sub>(*t*)
-     * **x**<sub>*r*</sub>(*t*) = *e*$^{{\lambda_r} t}\cos(\lambda_i t)$**v**<sub>*r*</sub> - $\sin(\lambda_i t)$**v**<sub>*i*</sub>)
-     * **x**<sub>*i*</sub>(*t*) = *e*$^{{\lambda_r} t}\sin(\lambda_i t)$**v**<sub>*r*</sub> - $\cos(\lambda_i t)$**v**<sub>*i*</sub>)
+     * **x**<sub>*r*</sub>(*t*) = *e*$^{\lambda_r t}\cos(\lambda_i t)$**v**<sub>*r*</sub> - $\sin(\lambda_i t)$**v**<sub>*i*</sub>)
+     * **x**<sub>*i*</sub>(*t*) = *e*$^{\lambda_r t}\sin(\lambda_i t)$**v**<sub>*r*</sub> - $\cos(\lambda_i t)$**v**<sub>*i*</sub>)
      * $\lambda$ = $\lambda_r$ + *i*$\lambda_i$, **v** = **v**<sub>*r*</sub> + *i***v**<sub>*i*</sub>
 
 ### Repeated Eigenvector and Generalised Eigenvector
@@ -538,7 +538,7 @@ Let **v**<sub>1</sub> be the *eigenvector* associated with *repeated eigenvalue*
     * Remember to check Wronskian still!
 
 ### Particular Solutions and General Solutions
-* General Solutions are of the form **x**(*t*) = *c*<sub>1</sub>**v**<sub>1</sub>*e*$^{{\lambda_1} t}$ + *c*<sub>2</sub>**v**<sub>2</sub>*e*$^{{\lambda_2} t}$ + ... + *c*<sub>*n*</sub>**v**<sub>*n*</sub>*e*$^{{\lambda_n} t}$
+* General Solutions are of the form **x**(*t*) = *c*<sub>1</sub>**v**<sub>1</sub>*e*$^{\lambda_1 t}$ + *c*<sub>2</sub>**v**<sub>2</sub>*e*$^{\lambda_2 t}$ + ... + *c*<sub>*n*</sub>**v**<sub>*n*</sub>*e*$^{\lambda_n t}$
 * To find the particular solution, we use the given initial conditions, which could be something like **x**(0) = 0, ...
     * This allows us to solve for the constants *c*<sub>*i*</sub>
 
