@@ -235,7 +235,7 @@ Note: The basis of a zero space {**0**} is the empty set $\emptyset$
 
 ### Coordinates relative to a Basis (or Set)
 Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} be a basis for *V*, and **v** = *c*<sub>1</sub>**u**<sub>1</sub> + *c*<sub>2</sub>**u**<sub>2</sub> + ... + *c*<sub>*k*</sub>**u**<sub>*k*</sub> be the **unique** representation of **v** $\in$ *V*
-* ![coordinates_basis](../images/coordinates_basis.png)
+* ![coordinates_basis](images/coordinates_basis.png)
 
 ### To compute coordinates relative to a Basis (or Set)
 * Solve the linear system: (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*k*</sub> $\mid$ **v**)
