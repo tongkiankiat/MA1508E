@@ -72,11 +72,11 @@ Adding on to 1. and 2.,
 
 ### Properties of Transpose
 
-* (**A**<suP>T</sup>)<sup>T</sup> = **A**
-* (_c_**A**)<sup>T</sup> = _c_**A**<sup>T</sup>
-* (**A** + **B**)<sup>T</sup>= **A**<sup>T</sup> + **B**<sup>T</sup>
-* (**AB**)<sup>T</sup> = **B**<sup>T</sup>**A**<sup>T</sup>
-* If **A** is **symmetric**, **A**<sup>T</sup> = **A**
+* (**A**<sup>*T*</sup>)<sup>*T*</sup> = **A**
+* (_c_**A**)<sup>*T*</sup> = _c_**A**<sup>*T*</sup>
+* (**A** + **B**)<sup>*T*</sup>= **A**<sup>*T*</sup> + **B**<sup>*T*</sup>
+* (**AB**)<sup>*T*</sup> = **B**<sup>*T*</sup>**A**<sup>*T*</sup>
+* If **A** is **symmetric**, **A**<sup>*T*</sup> = **A**
 
 ### Block Multiplication
 $$
@@ -113,7 +113,7 @@ Let **A** be an invertible matrix of order n.
 
 * (**A**<sup>-1</sup>)<sup>-1</sup> = **A**
 * (*a***A**)<sup>-1</sup> = $\frac{1}{a}$**A**<sup>-1</sup>
-* (**A**<sup>T</sup>)<sup>-1</sup> = (**A**<sup>-1</sup>)<sup>T</sup>
+* (**A**<sup>*T*</sup>)<sup>-1</sup> = (**A**<sup>-1</sup>)<sup>*T*</sup>
 * (**AB**)<sup>-1</sup> = **B**<sup>-1</sup>**A**<sup>-1</sup>
 
 ### Elementary Matrices
@@ -122,7 +122,7 @@ Let **A** be an invertible matrix of order n.
 
 ### Inverse of Elementary Matrices
 
-* **E**: *R<sub>i</sub>* + *cR<sub>j</sub>*, **E<sup>-1</sup>**: *R<sub>i</sub>* - *cR<sub>j</sub>*
+* **E**: *R<sub>i</sub>* + *cR<sub>j</sub>*, **E**<sup>-1</sup>: *R<sub>i</sub>* - *cR<sub>j</sub>*
 * **E**: *R<sub>i</sub>* ↔ *R<sub>j</sub>*, **E**<sup>-1</sup>: *R<sub>i</sub>* ↔ *R<sub>j</sub>* (same matrix!)
 * **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: $\frac{1}{c}$*R<sub>i</sub>*
 
@@ -145,7 +145,7 @@ Let **A** be an invertible matrix of order n.
 
 Let **A** and **B** be a square matrices of the same order.
 
-* det(**A**) = det(**A**<sup>T</sup>)
+* det(**A**) = det(**A**<sup>*T*</sup>)
 * If **A** is triangular, det(**A**) = *a<sub>11</sub>a<sub>22</sub>...a<sub>nn</sub>*
     * Multiply all its diagonal entries
 * det(**A**<sub>1</sub>**A**<sub>2</sub>...**A**<sub>k</sub>) = det(**A**<sub>1</sub>)det(**A**<sub>2</sub>)...det(**A**<sub>k</sub>)
@@ -164,7 +164,7 @@ Let **A** and **B** be a square matrices of the same order.
 
 ### Dot Product
 Also known as **inner product**
-* **u** $\cdot$ **v** = **u**<sup>T</sup>**v**
+* **u** $\cdot$ **v** = **u**<sup>*T*</sup>**v**
 * **u** $\cdot$ **v** = *u*<sub>1</sub>*v*<sub>1</sub> + *u*<sub>2</sub>*v*<sub>2</sub> + ... + *u*<sub>*n*</sub>*v*<sub>*n*</sub>
 
 Angle definition for Dot Product
@@ -194,7 +194,7 @@ Angle definition for Dot Product
 
 We can combine 2. and 3. and check: $\alpha$ **u** + $\beta$ **v** $\in$ span(*S*) (sometimes this is harder though, so just pick whichever is easier)
 
-### To check for Set Relations between Spans ()
+### To check for Set Relations between Spans
 * (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*S*</sub> $\mid$ **v**<sub>1</sub> $\mid$ **v**<sub>2</sub> $\mid$ ... $\mid$ **v**<sub>*T*</sub>) is **consistent** → span(*T*) $\subseteq$ span(*S*)
 
 ### Subspaces
@@ -235,7 +235,7 @@ Note: The basis of a zero space {**0**} is the empty set $\emptyset$
 
 ### Coordinates relative to a Basis (or Set)
 Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} be a basis for *V*, and **v** = *c*<sub>1</sub>**u**<sub>1</sub> + *c*<sub>2</sub>**u**<sub>2</sub> + ... + *c*<sub>*k*</sub>**u**<sub>*k*</sub> be the **unique** representation of **v** $\in$ *V*
-* ![coordinates_basis](images/coordinates_basis.png)
+![coordinates_basis](images/coordinates_basis.png)
 
 ### To compute coordinates relative to a Basis (or Set)
 * Solve the linear system: (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*k*</sub> $\mid$ **v**)
@@ -248,9 +248,56 @@ Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} be a 
 
 ## Subspaces Associated to a Matrix
 
-### 
+### Row Operations Preserve Row Space
+* If **A** and **B** are row equivalent matrices, Row(**A**) = Row(**B**)
+
+### Finding Basis for Row Space
+Let **A** be a matrix, with **R** being its *rref* form.
+* Basis of Row(**A**) is the nonzero rows of *rref*(**A**) **OR** nonzero rows of **A**
+
+### Finding Basis for Column Space
+Let **A** be a matrix, with **R** being its *rref* form.
+* Basis of Col(**A**) is the nonzero cols of *rref*(**A**) (note: cannot use original matrix **A**, as row operations **do not** preserve column space)
+
+### Rank
+Let **A** be an *m* x *n* matrix, and **R** = *rref*(**A**).
+* dim(Col(**A**)) = No. of **pivot columns** in **R**  
+ = No. of **leading entries** in **R**  
+ = No. of **nonzero rows** in **R** = dim(Row(**A**))
+* Thus, rank(**A**) = dim(Col(**A**))
+* rank(**A**) = rank(**A**<sup>*T*</sup>)
+* rank(**A**) $\leq$ min{*m*, *n*}
+
+### Rank-Nullity Theorem (Dimension Theorem)
+* rank(**A**) + nullity(**A**) = *n* (no. of columns)
+
+### Null Space Theorem
+* Null(**A**) = Null(**A**<sup>*T*</sup>**A**)
+
+### Full Rank
+* **A** is full rank if rank(**A**) = min{*m*, *n*}
+
+### Full Rank = *n* (no. of columns)
+* rank(**A**) = n
+* *Row*(**A**) = $\mathbb{R}^n$
+* Columns of **A** are linearly independent
+* **Ax** = **0** has only the *trivial solution*, Null(**A**) = {**0**}
+* **A**<sup>*T*</sup> is an *invertible matrix* of order *n*
+* **A** has a left inverse
+
+### Full Rank = *m* (no. of rows)
+* rank(**A**) = *m*
+* *Col*(**A**) = $\mathbb{R}^m$
+* Rows of **A** are linearly independent
+* **Ax** = **b** is consistent for *every* **b** $\in$ $\mathbb{R}^m$
+* **AA**<sup>*T*</sup> is an *invertible* matrix of order *m*
+* **A** has a right inverse
+
+<div style="page-break-after: always;"></div>
 
 ## Orthogonality, Projection, and LSS
+
+
 
 ## Eigenanalysis
 
