@@ -171,7 +171,7 @@ Angle definition for Dot Product
 * $\cos(\theta) = \frac{\mathbf{u} \cdot \mathbf{v}}{\lVert \mathbf{u} \rVert \lVert \mathbf{v} \rVert}$
 
 ### Norm (or Magnitude)
-* ||$\mathbf{u}$|| = $\sqrt{\mathbf{u} \cdot \mathbf{u}}$ = $\sqrt{\mathbf{u}_1^2 + \mathbf{u}_2^2 + \cdots + \mathbf{u}_n^2}$
+* $\lVert\mathbf{u}\lVert$ = $\sqrt{\mathbf{u} \cdot \mathbf{u}}$ = $\sqrt{\mathbf{u}_1^2 + \mathbf{u}_2^2 + \cdots + \mathbf{u}_n^2}$
 
 ### Properties of Inner Product and Norm
 * **u** $\cdot$ **v** = **v** $\cdot$ **u**
@@ -179,7 +179,7 @@ Angle definition for Dot Product
 * **u** $\cdot$ (*a* **v** + *b* **w**) = *a* **u** $\cdot$ **v** + *b* **u** $\cdot$ **w**
 * **u** $\cdot$ **u** $\geq$ 0
     * **u** $\cdot$ **u** = 0 *if and only if* **u** = **0**
-* ||*c* **u**|| = |*c*|||**u**||
+* $\lVert$*c* **u**$\lVert$ = $\mid$*c*$\mid$ $\lVert$**u**$\lVert$
 
 ### To check for Linear Combination
 * (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>k</sub> | **v**) is **consistent**
@@ -195,7 +195,7 @@ Angle definition for Dot Product
 We can combine 2. and 3. and check: $\alpha$ **u** + $\beta$ **v** $\in$ span(*S*) (sometimes this is harder though, so just pick whichever is easier)
 
 ### To check for Set Relations between Spans ()
-* (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*S*</sub> | **v**<sub>1</sub> | **v**<sub>2</sub> | ... | **v**<sub>*T*</sub>) is **consistent** → span(*T*) $\subseteq$ span(*S*)
+* (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*S*</sub> $\mid$ **v**<sub>1</sub> $\mid$ **v**<sub>2</sub> $\mid$ ... $\mid$ **v**<sub>*T*</sub>) is **consistent** → span(*T*) $\subseteq$ span(*S*)
 
 ### Subspaces
 If **V** is a *subspace*:
@@ -226,19 +226,19 @@ Note: The basis of a zero space {**0**} is the empty set $\empty$
 
 ### Other ways to check for Basis
 * B1
-    * |*S*| = *dim*(*V*)
+    * $\mid$*S*$\mid$ = *dim*(*V*)
     * *S* $\subseteq$ *V*
     * *S* is linearly independent
 * B2
-    * |*S*| = *dim*(*V*)
+    * $\mid$*S*$\mid$ = *dim*(*V*)
     * *V* $\subseteq$ span(*S*)
 
 ### Coordinates relative to a Basis (or Set)
 Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} be a basis for *V*, and **v** = *c*<sub>1</sub>**u**<sub>1</sub> + *c*<sub>2</sub>**u**<sub>2</sub> + ... + *c*<sub>*k*</sub>**u**<sub>*k*</sub> be the **unique** representation of **v** $\in$ *V*
-* $[\mathbf{v}]_S = \begin{pmatrix} c_1 \\ c_2 \\ \vdots \\ c_k \end{pmatrix}$
+* ![coordinates_basis]("../images/coordinates_basis.png")
 
 ### To compute coordinates relative to a Basis (or Set)
-* Solve the linear system: (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*k*</sub> | **v**)
+* Solve the linear system: (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*k*</sub> $\mid$ **v**)
 
 ### Dimensions
 * *dim*(*V*): Number of vectors in any *basis* of *V*
