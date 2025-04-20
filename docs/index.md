@@ -4,6 +4,11 @@ title: MA1508E
 ---
 # MA1508E Formulae, Theorems and Definitions
 
+## Note
+* I have added in parentheses (...) some additional keywords at some headers for easier lookup for some theorems/definitions/formulae.
+* If there are any more defintions or theorems you wish to add, create an issue or let me know directly!
+* There are **VERY** important lists/properties I have compiled [here](...), and have also scattered the link throughout the document to send you there directly, but they are also in their own individual sections.
+
 ## Table of Contents
 
 1. **[Chapter 1: Linear Systems](#linear-systems)**
@@ -13,6 +18,8 @@ title: MA1508E
 5. **[Chapter 5: Orthogonality, Projection, and Least Square Solution](#orthogonality-projection-and-lss)**
 6. **[Chapter 6: Eigenanalysis](#eigenanalysis)**
 7. **[Chapter 7: System of Linear Differential Equations](#system-of-linear-differential-equations)**
+
+<div style="page-break-after: always;"></div>
 
 ## Linear Systems
 
@@ -38,6 +45,8 @@ Adding on to 1. and 2.,
   *elementary row operations**.
 * Two linear systems have the **same solutions** if their augmented matrices are **row equivalent**.
     * Their rref forms are the same &#8594; same solution
+
+<div style="page-break-after: always;"></div>
 
 ## Matrix Algebra
 
@@ -115,12 +124,12 @@ Let **A** be an invertible matrix of order n.
 
 * **E**: *R<sub>i</sub>* + *cR<sub>j</sub>*, **E<sup>-1</sup>**: *R<sub>i</sub>* - *cR<sub>j</sub>*
 * **E**: *R<sub>i</sub>* ↔ *R<sub>j</sub>*, **E**<sup>-1</sup>: *R<sub>i</sub>* ↔ *R<sub>j</sub>* (same matrix!)
-* **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: \(\frac{1}{c}\)*R<sub>i</sub>*
+* **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: $\frac{1}{c}$*R<sub>i</sub>*
 
 ### Determinant
 
 * For 2×2 matrices, $\det(\mathbf{A}) = ad - bc$.
-* For higher powers, use cofactor expansion:
+* For higher powers, use cofactor expansion (Remember to check the sign!):
 
   $$ 
   \begin{pmatrix}
@@ -130,9 +139,7 @@ Let **A** be an invertible matrix of order n.
   \vdots & \vdots & \vdots & \ddots & \vdots \\
   \cdots & \cdots & \cdots & \cdots & \cdot
   \end{pmatrix}
-  $$
-
-  (Remember to check the sign!)
+  $$ 
 
 ### Properties of Determinant
 
@@ -151,9 +158,44 @@ Let **A** and **B** be a square matrices of the same order.
 * **E**: *R<sub>i</sub>* ↔ *R<sub>i</sub>* → det(**E**) = -1
 * **E**: *cR<sub>i</sub>* → det(**E**) = c
 
+<div style="page-break-after: always;"></div>
+
 ## Euclidean Vector Spaces
 
+### Dot Product
+Also known as **inner product**
+* **u** $\cdot$ **v** = **u**<sup>T</sup>**v**
+* **u** $\cdot$ **v** = *u*<sub>1</sub>*v*<sub>1</sub> + *u*<sub>2</sub>*v*<sub>2</sub> + ... + *u*<sub>*n*</sub>*v*<sub>*n*</sub>
 
+Angle definition for Dot Product
+* $\cos(\theta) = \frac{\mathbf{u} \cdot \mathbf{v}}{\lVert \mathbf{u} \rVert \lVert \mathbf{v} \rVert}$
+
+### Norm (or Magnitude)
+* ||$\mathbf{u}$|| = $\sqrt{\mathbf{u} \cdot \mathbf{u}}$ = $\sqrt{\mathbf{u}_1^2 + \mathbf{u}_2^2 + \cdots + \mathbf{u}_n^2}$
+
+### Properties of Inner Product and Norm
+* **u** $\cdot$ **v** = **v** $\cdot$ **u**
+* *c* **u** $\cdot$ **v** = (*c* **u**) $\cdot$ **v** = **u** $\cdot$ (*c* **v**)
+* **u** $\cdot$ (*a* **v** + *b* **w**) = *a* **u** $\cdot$ **v** + *b* **u** $\cdot$ **w**
+* **u** $\cdot$ **u** $\geq$ 0
+    * **u** $\cdot$ **u** = 0 *if and only if* **u** = **0**
+* ||*c* **u**|| = |*c*|||**u**||
+
+### To check for Linear Combination
+* (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>k</sub> | **v**) is **consistent**
+
+### To check if span(S) = $\R^n$
+* RREF of (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>k</sub>) has no zero rows
+
+### Properties of Linear Spans
+* Zero vector **0** is in span(*S*)
+* $\alpha$ **u** $\in$ span(*S*)
+* **u** + **v** $\in$ span(*S*)<br>
+
+We can combine 2. and 3. and check: $\alpha$ **u** + $\beta$ **v** $\in$ span(*S*) (sometimes this is harder though, so just pick whichever is easier)
+
+### To check for Set Relations between Spans ()
+* (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*S*</sub> | **v**<sub>1</sub> | **v**<sub>2</sub> | ... | **v**<sub>*T*</sub>) is **consistent** → span(*T*) $\subseteq$ span(*S*)
 
 ## Subspaces
 
