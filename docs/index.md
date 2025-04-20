@@ -182,9 +182,9 @@ Angle definition for Dot Product
 * $\lVert$*c* **u**$\lVert$ = $\mid$*c*$\mid$ $\lVert$**u**$\lVert$
 
 ### To check for Linear Combination
-* (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>k</sub> | **v**) is **consistent**
+* (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>k</sub> $\mid$ **v**) is **consistent**
 
-### To check if span(S) = $\R^n$
+### To check if span(S) = $\mathbb{R}^n$
 * *rref*(**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>k</sub>) has no zero rows
 
 ### Properties of Linear Spans
@@ -222,7 +222,7 @@ A set *S* is a basis for **V** if:
 * span(*S*) = **V**
 * *S* is linearly independent
 
-Note: The basis of a zero space {**0**} is the empty set $\empty$
+Note: The basis of a zero space {**0**} is the empty set $\emptyset$
 
 ### Other ways to check for Basis
 * B1
@@ -235,7 +235,7 @@ Note: The basis of a zero space {**0**} is the empty set $\empty$
 
 ### Coordinates relative to a Basis (or Set)
 Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} be a basis for *V*, and **v** = *c*<sub>1</sub>**u**<sub>1</sub> + *c*<sub>2</sub>**u**<sub>2</sub> + ... + *c*<sub>*k*</sub>**u**<sub>*k*</sub> be the **unique** representation of **v** $\in$ *V*
-* ![coordinates_basis]("../images/coordinates_basis.png")
+* ![coordinates_basis](../images/coordinates_basis.png)
 
 ### To compute coordinates relative to a Basis (or Set)
 * Solve the linear system: (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*k*</sub> $\mid$ **v**)
