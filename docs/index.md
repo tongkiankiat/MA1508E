@@ -531,7 +531,7 @@ Suppose $\lambda$ $\in$ $\mathbb{C}$ is a *complex eigenvalue* of **A** with *co
 * An *eigenvalue* $\lambda$ of **A** is a *repeated eigenvalue* if the *algebraic multiplicity* of $\lambda$ > 1
     * *r*$_\lambda$ > 1
 * If **v**<sub>1</sub> is an *eigenvector* associated to $\lambda$, **v**<sub>2</sub> is a *generalised eigenvector* associated to $\lambda$ if it is a solution to (**A** - $\lambda$**I**)**x** = **v**<sub>1</sub>
-* We find the *generalised eigenvector* if dim(*E*$_\lambda$) < *r*$_\lambda$
+* We find the *generalised eigenvector* if dim($E_\lambda$) < $r_\lambda$
 
 ### Solutions from Repeated Eigenvector and Generalised Eigenvector
 Let **v**<sub>1</sub> be the *eigenvector* associated with *repeated eigenvalue* $\lambda$, and **v**<sub>2</sub> be the *generalised eigenvector*
