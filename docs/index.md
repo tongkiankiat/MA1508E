@@ -535,6 +535,7 @@ Suppose $\lambda$ $\in$ $\mathbb{C}$ is a *complex eigenvalue* of **A** with *co
 
 ### Solutions from Repeated Eigenvector and Generalised Eigenvector
 Let **v**<sub>1</sub> be the *eigenvector* associated with *repeated eigenvalue* $\lambda$, and **v**<sub>2</sub> be the *generalised eigenvector*
+* **x**<sub>1</sub>(*t*) = *e*$^{\lambda t}$**v**<sub>1</sub>, **x**<sub>2</sub>(*t*) = *e*$^{\lambda t}$(*t* **v**<sub>1</sub> + **v**<sub>2</sub>)
 * {**x**<sub>1</sub>(*t*), **x**<sub>2</sub>(*t*)} forms a *fundamental set of solutions* for **y**' = **Ay**
     * Remember to check Wronskian still!
 
