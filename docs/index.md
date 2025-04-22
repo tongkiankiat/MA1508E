@@ -523,8 +523,8 @@ Let **A** be an order *n* square matrix with **real entries**
 Suppose $\lambda$ $\in$ $\mathbb{C}$ is a *complex eigenvalue* of **A** with *complex eigenvector* **v** $\in$ $\mathbb{C}^n$, with *e*$^{\lambda t}$**v** = **x**<sub>*r*</sub>(*t*) + **x**<sub>*i*</sub>(*t*)
 * {**x**<sub>*r*</sub>(*t*), **x**<sub>*i*</sub>(*t*)} is part of the *fundamental set of solutions* for **A**
 * **x** = *c*<sub>1</sub>**x**<sub>1</sub>(*t*) + *c*<sub>2</sub>**x**<sub>2</sub>(*t*)
-     * **x**<sub>*r*</sub>(*t*) = *e*$^{\lambda_r t}\cos(\lambda_i t)$**v**<sub>*r*</sub> - $\sin(\lambda_i t)$**v**<sub>*i*</sub>)
-     * **x**<sub>*i*</sub>(*t*) = *e*$^{\lambda_r t}\sin(\lambda_i t)$**v**<sub>*r*</sub> - $\cos(\lambda_i t)$**v**<sub>*i*</sub>)
+     * **x**<sub>*r*</sub>(*t*) = *e*$^{\lambda_r t}[\cos(\lambda_i t)$**v**<sub>*r*</sub> - $\sin(\lambda_i t)$**v**<sub>*i*</sub>]
+     * **x**<sub>*i*</sub>(*t*) = *e*$^{\lambda_r t}[\sin(\lambda_i t)$**v**<sub>*r*</sub> + $\cos(\lambda_i t)$**v**<sub>*i*</sub>]
      * $\lambda$ = $\lambda_r$ + *i*$\lambda_i$, **v** = **v**<sub>*r*</sub> + *i***v**<sub>*i*</sub>
 
 ### Repeated Eigenvector and Generalised Eigenvector
