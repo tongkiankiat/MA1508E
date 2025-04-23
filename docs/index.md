@@ -569,7 +569,7 @@ Let **A** be a square matrix of order *n*
 * Columns of **A** are linearly independent
 * **Ax** = **0** has only the *trivial solution*, Null(**A**) = {**0**}
 * **A**<sup>*T*</sup>**A** is an *invertible matrix* of order *n*
-* **A** has a left inverse, **A**<sup>*T*</sup>**A**
+* **A** has a left inverse, (**A**<sup>*T*</sup>**A**)<sup>-1</sup>**A**<sup>*T*</sup>
 
 ### Full Rank for Rows
 * rank(**A**) = *m*
@@ -577,4 +577,4 @@ Let **A** be a square matrix of order *n*
 * Rows of **A** are linearly independent
 * **Ax** = **b** is consistent for *every* **b** $\in$ $\mathbb{R}^m$
 * **AA**<sup>*T*</sup> is an *invertible* matrix of order *m*
-* **A** has a right inverse, **AA**<sup>*T*</sup>
+* **A** has a right inverse, **A**<sup>*T*</sup>(**AA**<sup>*T*</sup>)<sup>-1</sup>
