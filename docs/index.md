@@ -197,6 +197,7 @@ Angle definition for Dot Product
 We can combine 2. and 3. and check: $\alpha$ **u** + $\beta$ **v** $\in$ span(*S*) (sometimes this is harder though, so just pick whichever is easier)
 
 ### To check for Set Relations between Spans
+Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*S*</sub>} and *T* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*T*</sub>}
 * (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*S*</sub> $\mid$ **v**<sub>1</sub> $\mid$ **v**<sub>2</sub> $\mid$ ... $\mid$ **v**<sub>*T*</sub>) is **consistent** → span(*T*) $\subseteq$ span(*S*)
 
 ### Subspaces
@@ -331,11 +332,11 @@ The orthogonal complement of $V$ is the set of all vectors that are *orthogonal*
 * An orthogonal/orthonormal basis is also **linearly independent**
 
 ### Coordinates Relative to an Orthogonal Basis
-Let *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*k*</sub>} be an *orthogonal* basis for subspace *V*, and **v** $\in$ *V*
+Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} be an *orthogonal* basis for subspace *V*, and **v** $\in$ *V*
 ![coordinates_orthogonal_basis](images/coordinates_orthogonal_basis.png)
 
 ### Coordinates Relative to an Orthonormal Basis
-Let *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*k*</sub>} be an *orthonormal* basis for subspace *V*, and **v** $\in$ *V*
+Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} be an *orthonormal* basis for subspace *V*, and **v** $\in$ *V*
 ![coordinates_orthonormal_basis](images/coordinates_orthonormal_basis.png)
 
 ### To check if a set is orthogonal or orthonormal
@@ -352,7 +353,7 @@ Let *S* be the set to check, where *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, 
 Let *V* be a subspace of $\mathbb{R}^n$, every vector *w* in $\mathbb{R}^n$ can be decomposed **uniquely** as:
 * **w** = **w**<sub>*p*</sub> + **w**<sub>*n*</sub>
     * **w**<sub>*n*</sub> is *orthogonal* to *V*, and **w**<sub>*p*</sub> is a vector in *V*
-* To find **w**<sub>*p*</sub>, where *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*k*</sub>} is an *orthogonal basis* for *V*:
+* To find **w**<sub>*p*</sub>, where *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>} is an *orthogonal basis* for *V*:
     * $$\mathbf{w}_p = \frac{\mathbf{w} \cdot \mathbf{u}_1}{\mathbf{u}_1 \cdot \mathbf{u}_1} \mathbf{u}_1 + \frac{\mathbf{w} \cdot \mathbf{u}_2}{\mathbf{u}_2 \cdot \mathbf{u}_2} \mathbf{u}_2 + \cdots + \frac{\mathbf{w} \cdot \mathbf{u}_k}{\mathbf{u}_k \cdot \mathbf{u}_k} \mathbf{u}_k
     $$
     * IMPT: *S* must be **orthogonal or orthonormal!**
