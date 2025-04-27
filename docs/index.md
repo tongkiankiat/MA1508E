@@ -4,6 +4,10 @@ title: MA1508E
 ---
 # MA1508E Formulae, Theorems and Definitions
 
+## Updates
+* Added the definition for a nilpotent matrix [here](#important-lists-and-properties)
+* Added a [new section](#important-matlab-functions) for important MATLAB functions
+
 ## Notes
 * I have added in parentheses (...) some additional keywords at some headers for easier lookup for some theorems/definitions/formulae.
 * If there are any more defintions or theorems you wish to add, [create an issue](https://github.com/tongkiankiat/MA1508E/issues/new) or let me know directly!
@@ -20,6 +24,7 @@ title: MA1508E
 6. **[Chapter 6: Eigenanalysis](#eigenanalysis)**
 7. **[Chapter 7: System of Linear Differential Equations](#system-of-linear-differential-equations)**
 8. **[Important Lists and Properties](#important-lists-and-properties)**
+9. **[Important MATLAB Functions](#important-matlab-functions)
 
 <div style="page-break-after: always;"></div>
 
@@ -579,3 +584,47 @@ Let **A** be a square matrix of order *n*
 * **Ax** = **b** is consistent for *every* **b** $\in$ $\mathbb{R}^m$
 * **AA**<sup>*T*</sup> is an *invertible* matrix of order *m*
 * **A** has a right inverse, **A**<sup>*T*</sup>(**AA**<sup>*T*</sup>)<sup>-1</sup>
+
+### Nilpotent Matrix
+**A** is a *nilpotent* matrix if **A**<sup>*k*</sup> = 0 for some **positive integer** *k*
+
+## Important MATLAB Functions
+
+### Formatting answers
+* `format rat`
+    * display answers as rational numbers (fractions)
+* `format short`
+    * 4 decimal digits
+* `format long`
+    * 16 decimal digits
+
+### Norm/Magnitude
+* `sqrt(dot(u, u))` OR `norm(u)`
+
+### Matrix Functions
+* Transpose
+    * `A.'`
+* Rank
+    * `rank(A)`
+* Determinant
+    * `det(A)`
+* Raising matrix to a power n
+    * `A^n`
+* Inverse
+    * `inv(A)`
+    * `A^(-1)`
+* Adjoint
+    * `adj(A)`
+
+### Special Types of Matrices
+* Zero matrix of size m x n
+    * `zeros(m, n)`
+* Identity matrix of order n
+    * `eye(n)`
+* Diagonal matrix
+    * `diag(a1, a2, ..., an)`
+* Vandermonde matrix
+    * `v = [1;2;3;4;5;6;7;8]`
+    * `A = fliplr(vander(v))`
+        * This will display the values (from right to left) of : *x*, *x*<sup>2</sup>, ..., *x*<sup>8</sup>, and every column corresponds to the value that is subbed in
+        * ![vandermorde](images/vandermorde.png)
