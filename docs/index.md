@@ -25,7 +25,8 @@ title: MA1508E
 6. **[Chapter 6: Eigenanalysis](#eigenanalysis)**
 7. **[Chapter 7: System of Linear Differential Equations](#system-of-linear-differential-equations)**
 8. **[Important Lists and Properties](#important-lists-and-properties)**
-9. **[Important MATLAB Functions](#important-matlab-functions)
+9. **[Important MATLAB Functions](#important-matlab-functions)**
+10. **[MATLAB Algorithms](#matlab-algorithms)**
 
 <div style="page-break-after: always;"></div>
 
