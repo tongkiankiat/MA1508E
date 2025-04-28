@@ -7,6 +7,7 @@ title: MA1508E
 ## Updates
 * Added the definition for a nilpotent matrix [here](#important-lists-and-properties)
 * Added a [new section](#important-matlab-functions) for important MATLAB functions
+* Added a [new section](#matlab-algorithms) for the various useful algorithms in MATLAB
 
 ## Notes
 * I have added in parentheses (...) some additional keywords at some headers for easier lookup for some theorems/definitions/formulae.
@@ -626,5 +627,33 @@ Let **A** be a square matrix of order *n*
 * Vandermonde matrix
     * `v = [1;2;3;4;5;6;7;8]`
     * `A = fliplr(vander(v))`
-        * This will display the values (from right to left) of : *x*, *x*<sup>2</sup>, ..., *x*<sup>8</sup>, and every column corresponds to the value that is subbed in
-        * ![vandermorde](images/vandermorde.png)
+        * This will display the values (from right to left) of : *x*, *x*<sup>2</sup>, ..., *x*<sup>8</sup>, and every column corresponds to the value that is subbed in:
+        ![vandermorde](images/vandermorde.png)
+
+## MATLAB Algorithms
+
+### Gram Schmidt
+* The current code given does gram schmidt **without** normalisation
+* To view the *normalised* result:
+![gramschmidt_code](images/gramschmidt_code.png)
+    * Uncomment the line `v(:,ii) = v(:,ii) / norm(v(:,ii));` by removing the `%` symbol at the front of the line
+    * Recomment to view the *unnormalised* result by adding the `%` symbol at the front of the line
+
+### Diagonalising a Matrix
+Assume **A** to be the matrix to diagonalise with dimension 3
+* `syms a` (`a` will be the placeholder for our eigenvalue)
+* `B = a * eye(3) - A`
+* `det(B)` (to show characteristic polynomial)
+* `solve(det(B))` (to find the eigenvalues)
+* For each eigenvalue found:
+    * `a = eigenvalue`
+    * `B = a * eye(3) - A`
+    * `rref(B)` (to get the eigenvalue)
+* Tip: Use the arrow key up to retrieve past commands so you don't have to copy paste each time
+* This works even if eigenvalue is complex, just use `i` for the complex number
+
+### Orthogonally Diagonalising a Matrix (Orthogonal Diagonalisation, Symmetric Matrix)
+Assume **A** to be the matrix to orthogonally diagonalise (remember that **A** must also be symmetric!)
+* `[P D] = eig(A)`
+    * This gives an *orthogonal* matrix **P** and *diagonal* matrix **D**, so we can directly use the result here
+    * However, still check if question still requires you to show your working!
