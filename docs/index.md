@@ -11,7 +11,7 @@ title: MA1508E
 
 ## Notes
 * I have added in parentheses (...) some additional keywords at some headers for easier lookup for some theorems/definitions/formulae.
-* If there are any more defintions or theorems you wish to add, [create an issue](https://github.com/tongkiankiat/MA1508E/issues/new) or let me know directly!
+* If there are any more definitions or theorems you wish to add, [create an issue](https://github.com/tongkiankiat/MA1508E/issues/new) or let me know directly!
 * There are **VERY** important lists/properties I have compiled [here](#important-lists-and-properties), and have also scattered the link throughout the document to send you there directly, but they are also in their own individual sections.
 * The order of theorems/definitions might also not follow exactly the order in which they were taught, I mostly grouped them together based on how well they flow.
 
@@ -50,8 +50,7 @@ Adding on to 1. and 2.,
 
 ### Row Equivalent Matrices
 
-* Two (augmented) matrices are **row equivalent** if one can be obtained from the other by performing a set of *
-  *elementary row operations**.
+* Two (augmented) matrices are **row equivalent** if one can be obtained from the other by performing a set of **elementary row operations**.
 * Two linear systems have the **same solutions** if their augmented matrices are **row equivalent**.
     * Their rref forms are the same &#8594; same solution
 
@@ -66,7 +65,7 @@ Adding on to 1. and 2.,
 * **0** + **A** = **A** (Additive Identity)
 * **A** + (-**A**) = **0** (Additive Inverse)
 * _a_(**A** + **B**) = _a_**A** + _a_**B** (Distributive Law)
-* (_a_ + _b_)**A** = _a_*A* + _b_**A** (Scalar Addition)
+* (_a_ + _b_)**A** = _a_**A** + _b_**A** (Scalar Addition)
 * (_ab_)**A** = _a_(_b_**A**) (Associative)
 * If _a_**A** = **0**, then either _a_ = 0 or **A** = **0**
 
