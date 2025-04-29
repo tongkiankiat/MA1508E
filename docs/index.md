@@ -638,7 +638,7 @@ Let **A** be a square matrix of order *n*
 * Vandermonde matrix
     * `v = [1;2;3;4;5;6;7;8]`
     * `A = fliplr(vander(v))`
-        * This will display the values (from right to left) of : *x*, *x*<sup>2</sup>, ..., *x*<sup>8</sup>, and every column corresponds to the value that is subbed in:
+        * This will display the values (from right to left) of : *x*, *x*<sup>2</sup>, ..., *x*<sup>8</sup>, and every row corresponds to the value that is subbed in:
         ![vandermorde](images/vandermorde.png)
 
 <div style="page-break-after: always;"></div>
