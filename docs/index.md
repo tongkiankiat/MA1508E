@@ -11,7 +11,7 @@ title: MA1508E
 
 ## Notes
 * I have added in parentheses (...) some additional keywords at some headers for easier lookup for some theorems/definitions/formulae.
-* If there are any more definitions or theorems you wish to add, [create an issue](https://github.com/tongkiankiat/MA1508E/issues/new) or let me know directly!
+* If there are any more definitions or theorems you wish to add, create an issue or let me know directly!
 * There are **VERY** important lists/properties I have compiled [here](#important-lists-and-properties), and have also scattered the link throughout the document to send you there directly, but they are also in their own individual sections.
 * The order of theorems/definitions might also not follow exactly the order in which they were taught, I mostly grouped them together based on how well they flow.
 
