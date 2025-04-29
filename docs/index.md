@@ -109,8 +109,6 @@ B =
 \end{aligned}
 $$
 
-
-
 ### Invertible Matrices
 
 [Full Invertibility List](#full-invertibility-list-invertible-matrix-properties)
@@ -131,7 +129,7 @@ Let **A** be an invertible matrix of order n.
 ### Inverse of Elementary Matrices
 
 * **E**: *R<sub>i</sub>* + *cR<sub>j</sub>*, **E**<sup>-1</sup>: *R<sub>i</sub>* - *cR<sub>j</sub>*
-* **E**: *R<sub>i</sub>* ↔ *R<sub>j</sub>*, **E**<sup>-1</sup>: *R<sub>i</sub>* ↔ *R<sub>j</sub>* (same matrix!)
+* **E**: *R<sub>i</sub>* $\leftrightarrow$ *R<sub>j</sub>*, **E**<sup>-1</sup>: *R<sub>i</sub>* $\leftrightarrow$ *R<sub>j</sub>* (same matrix!)
 * **E**: *cR<sub>i</sub>*, **E**<sup>-1</sup>: $\frac{1}{c}$*R<sub>i</sub>*
 
 ### Determinant
@@ -162,9 +160,9 @@ Let **A** and **B** be a square matrices of the same order.
 
 ### Determinant of Elementary Row Operations
 
-* **E**: *R<sub>i</sub>* + *cR<sub>i</sub>* → det(**E**) = 1
-* **E**: *R<sub>i</sub>* ↔ *R<sub>i</sub>* → det(**E**) = -1
-* **E**: *cR<sub>i</sub>* → det(**E**) = c
+* **E**: *R<sub>i</sub>* + *cR<sub>i</sub>* $\rightarrow$ det(**E**) = 1
+* **E**: *R<sub>i</sub>* $\leftrightarrow$ *R<sub>i</sub>* $\rightarrow$ det(**E**) = -1
+* **E**: *cR<sub>i</sub>* $\rightarrow$ det(**E**) = c
 
 <div style="page-break-after: always;"></div>
 
@@ -204,7 +202,7 @@ We can combine 2. and 3. and check: $\alpha$ **u** + $\beta$ **v** $\in$ span(*S
 
 ### To check for Set Relations between Spans
 Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*S*</sub>} and *T* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*T*</sub>}
-* (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*S*</sub> $\mid$ **v**<sub>1</sub> $\mid$ **v**<sub>2</sub> $\mid$ ... $\mid$ **v**<sub>*T*</sub>) is **consistent** → span(*T*) $\subseteq$ span(*S*)
+* (**u**<sub>1</sub> **u**<sub>2</sub> ... **u**<sub>*S*</sub> $\mid$ **v**<sub>1</sub> $\mid$ **v**<sub>2</sub> $\mid$ ... $\mid$ **v**<sub>*T*</sub>) is **consistent** $\rightarrow$ span(*T*) $\subseteq$ span(*S*)
 
 ### Subspaces
 If **V** is a *subspace*:
@@ -220,7 +218,7 @@ We can combine 2. and 3. and check: $\alpha$ **u** + $\beta$ **v** $\in$ **V** (
 ### Linear Independence
 Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>}, then *S* is **linearly independent** if:
 * *c*<sub>1</sub>**u**<sub>1</sub> + *c*<sub>2</sub>**u**<sub>2</sub> + ... + *c*<sub>*k*</sub>**u**<sub>*k*</sub> = **0** can only be satisfied by *c*<sub>1</sub> = *c*<sub>2</sub> = ... = *c*<sub>*k*</sub> = 0
-    * *rref*(*S*) = **I** → *S* is **linearly independent**
+    * *rref*(*S*) = **I** $\rightarrow$ *S* is **linearly independent**
 
 ### To check for linear independence
 Let *S* = {**u**<sub>1</sub>, **u**<sub>2</sub>, ..., **u**<sub>*k*</sub>}
@@ -369,6 +367,9 @@ However, if possible, try and use [LSS Formula](#orthogonal-projection-using-lss
 ![orthogonal_projection](images/orthogonal_projection.png)
 
 ### Gram Schmidt Process
+
+[MATLAB Code for Gram Schmidt](#gram-schmidt)
+
 Let *S* = {**v**<sub>1</sub>, **v**<sub>2</sub>, ..., **v**<sub>*k*</sub>} be a **linearly independent** set
 ![gram_schmidt](images/gram_schmidt.png)
 * Note that the resultant set is **not normalised yet**, so we have to normalise ourselves
@@ -433,6 +434,9 @@ To obtain the eigenvalues of a square matrix **A** of order *n*, we solve the ch
 * **A** has *n* distinct *eigenvalues*
 
 ### To diagonalise a matrix
+
+[MATLAB Code to diagonalise a matrix](#diagonalising-a-matrix-aka-find-eigenvalues-and-eigenvectors)
+
 Let **A** be an order *n* square matrix
 * Compute det(*x***I** - **A**) = 0 to get the *eigenvalues*
 * For each eigenvalue $\lambda_i$, solve the system ($\lambda_i$**I** - **A**)*x* = 0
@@ -458,6 +462,9 @@ Let **A** be an order *n* square matrix
     * Dot product of *eigenvectors* from *different* *eigenspaces* = 0
 
 ### To orthogonally diagonalise a matrix
+
+[MATLAB Code for orthogonal diagonalisation](#orthogonally-diagonalising-a-matrix-orthogonal-diagonalisation-symmetric-matrix)
+
 Let **A** be an order *n* square matrix
 * Compute det(*x***I** - **A**) = 0 to get the *eigenvalues*
 * For each eigenvalue $\lambda_i$, solve the system ($\lambda_i$**I** - **A**)*x* = 0
@@ -551,6 +558,8 @@ Let **v**<sub>1</sub> be the *eigenvector* associated with *repeated eigenvalue*
 * To find the particular solution, we use the given initial conditions, which could be something like **x**(0) = 0, ...
     * This allows us to solve for the constants *c*<sub>*i*</sub>
 
+<div style="page-break-after: always;"></div>
+
 ## Important Lists and Properties
 
 ### Full Invertibility List (Invertible Matrix Properties)
@@ -588,6 +597,8 @@ Let **A** be a square matrix of order *n*
 
 ### Nilpotent Matrix
 **A** is a *nilpotent* matrix if **A**<sup>*k*</sup> = 0 for some **positive integer** *k*
+
+<div style="page-break-after: always;"></div>
 
 ## Important MATLAB Functions
 
@@ -630,16 +641,24 @@ Let **A** be a square matrix of order *n*
         * This will display the values (from right to left) of : *x*, *x*<sup>2</sup>, ..., *x*<sup>8</sup>, and every column corresponds to the value that is subbed in:
         ![vandermorde](images/vandermorde.png)
 
+<div style="page-break-after: always;"></div>
+
 ## MATLAB Algorithms
 
 ### Gram Schmidt
+
+[Notes for Gram Schmidt](#gram-schmidt-process)
+
 * The current code given does gram schmidt **without** normalisation
 * To view the *normalised* result:
 ![gramschmidt_code](images/gramschmidt_code.png)
     * Uncomment the line `v(:,ii) = v(:,ii) / norm(v(:,ii));` by removing the `%` symbol at the front of the line
     * Recomment to view the *unnormalised* result by adding the `%` symbol at the front of the line
 
-### Diagonalising a Matrix
+### Diagonalising a Matrix (AKA find eigenvalues and eigenvectors)
+
+[Notes for Matrix Diagonalisation](#to-diagonalise-a-matrix)
+
 Assume **A** to be the matrix to diagonalise with dimension 3
 * `syms a` (`a` will be the placeholder for our eigenvalue)
 * `B = a * eye(3) - A`
@@ -653,6 +672,9 @@ Assume **A** to be the matrix to diagonalise with dimension 3
 * This works even if eigenvalue is complex, just use `i` for the complex number
 
 ### Orthogonally Diagonalising a Matrix (Orthogonal Diagonalisation, Symmetric Matrix)
+
+[Notes for Orthogonal Diagonalisation](#to-orthogonally-diagonalise-a-matrix)
+
 Assume **A** to be the matrix to orthogonally diagonalise (remember that **A** must also be symmetric!)
 * `[P D] = eig(A)`
     * This gives an *orthogonal* matrix **P** and *diagonal* matrix **D**, so we can directly use the result here
